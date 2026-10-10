@@ -1,0 +1,24 @@
+{
+  "name": "shreya-admin-portal",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently -k \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:client": "npm --workspace client run dev",
+    "dev:server": "npm --workspace server run dev",
+    "build": "npm --workspace server run build && npm --workspace client run build",
+    "db:generate": "npm --workspace server run db:generate",
+    "db:migrate": "npm --workspace server run db:migrate",
+    "db:deploy": "npm --workspace server exec -- prisma migrate deploy",
+    "db:seed": "npm --workspace server run db:seed",
+    "start": "npm --workspace server run start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

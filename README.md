@@ -139,6 +139,12 @@ npm run dev
 
 ---
 
+## School administration portal
+
+The separate Shreya administrator experience lives in [`admin-portal/`](./admin-portal/README.md) and does not replace or change the student portal. It includes its own React/TypeScript UI, Express/Prisma API, PostgreSQL schema, JWT/RBAC, and repeatable demo seed. Follow its README for database setup and run instructions.
+
+---
+
 ## 6. Automated Testing & Verification
 
 ### Backend Tests (JUnit 5 + Spring Boot Test + MockMvc)
